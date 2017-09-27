@@ -18,12 +18,16 @@
     "cloudant": "^1.1.0",
     "commander": "^2.6.0",
     "http-post": "^0.1.1",
-    "http-proxy": "^1.8.1"
+    "http-proxy": "^1.8.1",
+    "snyk": "^1.41.1"
   },
   "engines": {
     "node": "~0.10.x"
   },
   "scripts": {
-    "start": "node app-frontend.js && node app-backend.js"
-  }
+    "start": "node app-frontend.js && node app-backend.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
